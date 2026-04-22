@@ -7,7 +7,14 @@
 
 ---
 
-## Attribution
+## Attribution & Credits
 
-- Original Website: [OJAD - Suzuki-kun: Prosody Tutor](https://www.gavo.t.u-tokyo.ac.jp/ojad/eng/phrasing/index)
-- Theme: [Camping](https://github.com/monkeytypegame/monkeytype/blob/master/frontend/src/ts/constants/themes.ts) by MonkeyType
+- **Data Source:** [OJAD - Online Japanese Accent Dictionary](https://www.gavo.t.u-tokyo.ac.jp/ojad/)
+- **Research Credits:** Minematsu Laboratory / Saito Laboratory, Graduate School of Engineering, The University of Tokyo
+- **Design Inspiration:** `Camping` theme colors provided by the [MonkeyType](https://github.com/monkeytypegame/monkeytype) project under the GPL-3.0 License.
+
+## License
+
+This project is licensed under **CC BY-NC 4.0 (Attribution-NonCommercial)**. 
+- You are free to share and adapt the code for non-commercial study.
+- You must provide attribution to this project and the original OJAD source.

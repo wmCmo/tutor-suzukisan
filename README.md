@@ -9,4 +9,5 @@
 
 ## Attribution
 
-- [OJAD - Suzuki-kun: Prosody Tutor](https://www.gavo.t.u-tokyo.ac.jp/ojad/eng/phrasing/index)
+- Original Website: [OJAD - Suzuki-kun: Prosody Tutor](https://www.gavo.t.u-tokyo.ac.jp/ojad/eng/phrasing/index)
+- Theme: [Camping](https://github.com/monkeytypegame/monkeytype/blob/master/frontend/src/ts/constants/themes.ts) by MonkeyType

@@ -3,6 +3,10 @@ import type MoraDataType from '../types/MoraData';
 
 export default async function getPitch(sentence: string) {
     try {
+        const endpoint = import.meta.env.DEV
+            ? "/ojad/phrasing/index"
+            : "https://www.gavo.t.u-tokyo.ac.jp/ojad/phrasing/index";
+
         const formData = new URLSearchParams();
         formData.append("_method", "POST");
         formData.append("data[Phrasing][text]", sentence);
@@ -16,16 +20,17 @@ export default async function getPitch(sentence: string) {
         formData.append("data[Phrasing][subscript]", 'visible');
         formData.append("data[Phrasing][jeita]", 'invisible');
 
-        const res = await fetch(
-            "/ojad/phrasing/index",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                body: formData.toString()
-            }
-        );
+        const res = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: formData.toString()
+        });
+
+        if (!res.ok) {
+            throw new Error(`Pitch request failed with status ${res.status}`);
+        }
 
         const html = await res.text();
         const $ = cheerio.load(html);
